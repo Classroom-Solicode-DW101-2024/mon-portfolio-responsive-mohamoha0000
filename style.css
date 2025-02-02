@@ -26,36 +26,39 @@ header .hamburger {
     font-size: 20px;
     cursor: pointer;
 }
-@media (max-width:700px) {
-    header{
-        justify-content: right;
-    }
-    header nav ul{
-        display:none;
-    }
-    header .hamburger {
-        display: block;
-        margin-right: 1em;
-    }
 
-    header nav ul.show {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 4;
-    }
 
+
+/*****main****/
+
+
+main div {
+    text-align: center;
 }
+main div hr{
+    width:40%;
+    display: inline-block;
+}
+main div h2{
+    display: inline-block;
+}
+
+main div .box{
+    text-align: left;
+    padding: 2em;
+    background-color: #3391B4;
+    border-radius: 30px;
+    box-shadow: 6px 12px 5px 0px rgba(240, 162, 35, 0.3);
+}
+main div  .box h3{
+    color:#fff;
+}
+main div  .box p{
+    color:#fff;
+    font-size: clamp(5px, 5vw, 20px);
+}
+
+
 
 /* landingpage*/
 
@@ -83,7 +86,7 @@ main .landingpage .content{
     width:100%;
     height: 100%;
     z-index: 3;
-    display: flex;          /* Add flexbox */
+    display: flex;       
     flex-direction: column; 
 }
 
@@ -115,4 +118,43 @@ main .landingpage .content div button{
 main .landingpage .content div button:hover{
     background-color: #bb4317;
     transform: scale(1.2);
+}
+
+
+
+@media (max-width:700px) {
+    main div hr{
+        display: none;
+    }
+    header{
+        justify-content: right;
+    }
+    header nav ul{
+        display:none;
+    }
+    header .hamburger {
+        display: block;
+        margin-right: 1em;
+    }
+
+    header nav ul.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 4;
+    }
+    main .projects .box div{
+        flex-direction: column;
+        
+    }
 }
